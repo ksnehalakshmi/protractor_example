@@ -10,7 +10,7 @@ checkout changelog: false, poll: false, scm:[$class: 'GitSCM', branches: [[name:
 
   
   stage 'Protractor test'
-  
+  bat "npm install"
   bat "protractor conf.js"
 
 echo "Testing Success"
