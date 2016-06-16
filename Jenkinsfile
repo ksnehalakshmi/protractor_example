@@ -11,6 +11,7 @@ checkout changelog: false, poll: false, scm:[$class: 'GitSCM', branches: [[name:
   
   stage 'Protractor test'
   bat "npm install"
+  bat "node_modules/.bin/webdriver_manager update"
   bat "protractor conf.js"
 
 echo "Testing Success"
